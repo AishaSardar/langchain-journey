@@ -10,10 +10,10 @@ def chat(user_message):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "system", "content": "You are a Python tutor who explains things simply."},
             {"role": "user", "content": user_message}
         ],
-        temperature=0.7,
+        temperature=1.0,
         max_tokens=500
     )
     return response.choices[0].message.content
